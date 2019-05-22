@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+table {
+   width: 100%;
+   border: 1px solid #000;
+   
+}
+ 
+th, td {
+   width: 20%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-collapse: collapse;
+   padding: 0.3em;
+   caption-side: bottom;
+}
+body{
+	 background: #ffffff;
+}
+caption {
+   padding: 0.3em;
+   color: #400040;
+    background: #c0c0c0;
+    border: 3px solid #516D66;
+}
+th {
+   background: #ff8040;
+}
+.button {
+	width: 10%;
+	margin-left: 45%;
+	border: 3px solid #516D66;
+	border-radius: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	background: #F5F2F5; 
+}
+

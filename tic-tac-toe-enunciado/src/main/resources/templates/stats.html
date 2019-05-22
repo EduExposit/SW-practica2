@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+
+<link rel="stylesheet" href="/css/tabla.css">
+
+
+</head>
+<body>
+
+          <div class="container" th:if="${#lists.isEmpty(jugadores)}">
+		<h2>Lista Vacia</h2>
+	</div>
+
+	<div class="clasificacion" th:unless="${#lists.isEmpty(jugadores)}">
+
+
+		<table>
+		<caption>STADISTICS</caption>
+			<tr>
+				<th>Name</th>
+				<th>Played</th>
+				<th>Won</th>
+				<th>Tied</th>
+				<th>Lost</th>
+			</tr>
+			<div th:each="jugador : ${jugadores}">
+			<tr>
+				<td><span th:text="${jugador.name}"></span></td>
+				<td><span th:text="${jugador.jugadas}"></span></td>
+				<td><span th:text="${jugador.ganadas}"></span></td>
+				<td><span th:text="${jugador.empatadas}"></span></td>
+				<td><span th:text="${jugador.perdidas}"></span></td>
+			</tr>
+			</div>
+		</table>
+
+	</div>
+	<br><br>
+	<div class="row">
+			<div class="button">
+				<a href="/"><h4 class="text-center colorDark">Volver</h3></a>
+			</div>
+		</div>
+</body>
+</html>
+
